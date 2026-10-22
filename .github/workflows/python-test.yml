@@ -103,7 +103,7 @@ jobs:
           OPTILLM_API_KEY: optillm
           # Bound generation: dhara-250m does not reliably emit an EOS token and would
           # otherwise ramble up to the default 4096 tokens per call (minutes each).
-          OPTILLM_MAX_TOKENS: "256"
+          OPTILLM_MAX_TOKENS: "128"
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
 
       - name: Run integration tests (full suite, including real-LLM tests)
